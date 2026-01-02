@@ -136,3 +136,43 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
     -ms-hyphens: auto;     /* Edge */
     hyphens: auto;         /* Standard */
 }
+
+/* ========================
+   BENEFITS SECTION STYLES
+   ======================== */
+
+/* Smooth Hover Transition */
+.transition-300 {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effect: Card background turns slightly off-white, shadow increases */
+.shadow-hover:hover {
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    background-color: var(--secondary-color); /* Light cream color from theme */
+    border-color: transparent !important;
+    transform: translateY(-5px);
+}
+
+/* Icon Container Sizing */
+.flex-shrink-0 {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Mobile Tweak: Stack icon on top for very small screens if text feels cramped */
+@media (max-width: 400px) {
+    .d-flex.align-items-start {
+        flex-direction: column;
+        text-align: center;
+    }
+    .flex-shrink-0 {
+        margin-right: 0 !important;
+        margin-bottom: 1rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
