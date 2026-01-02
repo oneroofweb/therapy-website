@@ -1,0 +1,138 @@
+/* ========================
+   THEME SETUP
+   ======================== */
+:root {
+    --primary-color: #7A9E7E;    /* Sage Green */
+    --secondary-color: #F3EFEA;  /* Off-White */
+    --dark-text: #2F3E46;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--dark-text);
+}
+
+h1, h2, h3, h4, h5, h6, .navbar-brand {
+    font-family: 'Playfair Display', serif;
+}
+/* ========================
+   HERO SECTION STYLES
+   ======================== */
+
+#hero {
+    /* Desktop Default Height (Taller for better impact on big screens) */
+    min-height: 75vh;
+    margin-top: 0; /* Ensure no gaps */
+}
+
+/* Background Image Styling */
+.hero-bg {
+    background-size: cover !important;
+    background-position: center center !important;
+}
+
+/* Customize WhatsApp Button Color to match brand */
+.btn-success {
+    background-color: #25D366; /* Official WhatsApp Green */
+    border-color: #25D366;
+}
+.btn-success:hover {
+    background-color: #1da851;
+    border-color: #1da851;
+}
+
+
+/* ========== MOBILE SPECIFIC TWEAKS (The 50vh Magic) ========== */
+
+@media (max-width: 767.98px) {
+    
+    /* 1. Force 50vh Height on Mobile */
+    #hero {
+        min-height: 50vh !important;
+        height: 50vh !important;
+    }
+
+    /* 2. Adjust Headline Size for smaller screens */
+    .hero-title {
+        font-size: 2rem; /* Smaller H1 so it fits well in 50vh */
+    }
+
+    /* 3. Button Container adjustments */
+    .mobile-btn-container {
+        /* Ensures buttons take full available width together */
+        width: 100%; 
+        padding: 0 10px; /* Slight padding from screen edges */
+    }
+
+    /* The 'flex-grow-1' in the HTML makes them stretch evenly side-by-side.
+       We just ensure the text isn't too big on very small phones. */
+    #hero .btn-lg {
+        font-size: 0.95rem;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+        white-space: nowrap; /* Prevents text wrapping inside button */
+    }
+}
+/* ========================
+   SERVICES SECTION STYLES
+   ======================== */
+
+/* Background color using theme variable */
+.section-bg {
+    background-color: var(--secondary-color); /* Using the off-white defined in boilerplate */
+}
+
+/* Letter spacing utility for subheading */
+.ls-2 {
+    letter-spacing: 2px;
+}
+
+/* --- Service Card Styling --- */
+
+.service-card {
+    /* Smooth transition for hover effect */
+    transition: all 0.3s ease-in-out;
+    background-color: #fff;
+}
+
+/* The Hover Effect: Lift up and increase shadow */
+.service-card:hover {
+    transform: translateY(-10px); /* Moves card up by 10px */
+    box-shadow: 0 1rem 3rem rgba(0,0,0,0.1) !important; /* Softer, deeper shadow */
+}
+
+/* Card Image Styling */
+.service-card .card-img-top {
+    height: 240px; /* Fixed height ensures all images are the same size */
+    object-fit: cover; /* Ensures image covers the area without stretching */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Optional: Subtle zoom on image hover */
+.service-card:hover .card-img-top {
+    transform: scale(1.05);
+}
+
+/* Card Title Font */
+.service-card .card-title {
+    color: var(--dark-text);
+    /* Using the serif font from boilerplate */
+    font-family: 'Playfair Display', serif; 
+    font-weight: 600;
+}
+/* ========================
+   SMART TEXT JUSTIFICATION
+   ======================== */
+
+.text-justify-smart {
+    text-align: justify;
+    
+    /* 1. This ensures the last line is always left-aligned (standard) */
+    text-align-last: left; 
+
+    /* 2. THE SECRET: Hyphenation */
+    /* This breaks long words (e.g., "tre-atment") so you don't get huge gaps */
+    -webkit-hyphens: auto; /* Chrome/Safari */
+    -ms-hyphens: auto;     /* Edge */
+    hyphens: auto;         /* Standard */
+}
