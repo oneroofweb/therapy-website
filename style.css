@@ -17,6 +17,61 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
     font-family: 'Playfair Display', serif;
 }
 /* ========================
+   NAVBAR STYLES
+   ======================== */
+
+/* 1. Navbar Spacing */
+.navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+/* 2. Text Logo Styling */
+.navbar-brand {
+    text-decoration: none;
+}
+
+.logo-text {
+    font-family: 'Playfair Display', serif; /* Luxury Font */
+    font-weight: 700; /* Bold */
+    font-size: 1.5rem;
+    color: var(--dark-text); /* Dark Slate color */
+    letter-spacing: 0.5px;
+}
+
+.logo-icon {
+    font-size: 1.5rem;
+}
+
+/* 3. Navigation Links */
+.nav-link {
+    color: var(--dark-text) !important;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--primary-color) !important; /* Green on hover */
+}
+
+/* 4. Mobile Offcanvas Tweaks */
+@media (max-width: 991px) {
+    .offcanvas {
+        max-width: 80%; /* Takes 80% of screen width on mobile */
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    
+    .nav-link {
+        padding: 12px 0; /* More space for touch targets */
+        border-bottom: 1px solid #f8f9fa; /* Divider lines */
+    }
+    
+    .logo-text {
+        font-size: 1.3rem; /* Slightly smaller on mobile */
+    }
+}
+/* ========================
    HERO SECTION STYLES
    ======================== */
 
@@ -255,4 +310,55 @@ html, body {
     overflow-x: hidden; /* Hides horizontal scrollbar */
     width: 100%;        /* Ensures body doesn't stretch beyond screen */
     position: relative; /* Stabilizes layout */
+}
+/* ========================
+   MINIMAL FOOTER STYLES
+   ======================== */
+
+/* Brand Font */
+.footer-brand {
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 1px;
+}
+
+/* Social Icons */
+.social-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle transparent white */
+    color: #fff;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    background-color: var(--primary-color); /* Turns Green on Hover */
+    transform: translateY(-3px);
+    color: #fff;
+}
+
+/* Footer Links */
+.footer-link {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+/* Mobile Tweak: Stack links if screen is too small */
+@media (max-width: 400px) {
+    .list-inline-item {
+        display: block;
+        margin: 10px 0;
+    }
 }
