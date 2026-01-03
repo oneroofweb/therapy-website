@@ -26,3 +26,33 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 });
+
+// =================== FAQ Load More Logic =====================
+document.addEventListener('DOMContentLoaded', function() {
+    const loadMoreBtn = document.getElementById('loadMoreFaq');
+    
+    if (loadMoreBtn) {
+        loadMoreBtn.addEventListener('click', function() {
+            // Select all currently hidden FAQs
+            const hiddenFaqs = document.querySelectorAll('.faq-hidden.d-none');
+            
+            // Determine how many to show (Max 5)
+            const itemsToShow = 5;
+            
+            for (let i = 0; i < itemsToShow; i++) {
+                if (hiddenFaqs[i]) {
+                    // Remove the 'd-none' class to make it visible
+                    // Add a fade-in animation class if desired
+                    hiddenFaqs[i].classList.remove('d-none');
+                    hiddenFaqs[i].classList.add('fade-in-up'); 
+                }
+            }
+
+            // If no more hidden items exist after this batch, hide the button
+            const remainingHidden = document.querySelectorAll('.faq-hidden.d-none');
+            if (remainingHidden.length === 0) {
+                loadMoreBtn.style.display = 'none';
+            }
+        });
+    }
+});
