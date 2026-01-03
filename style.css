@@ -129,6 +129,14 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
         white-space: nowrap; /* Prevents text wrapping inside button */
     }
 }
+
+/* ==================================================
+   Bullet Point Text Alignment - Procedure Section
+   ==================================================*/
+.card-body ul li {
+    line-height: 1.6; /* Improves readability */
+    align-items: start; /* Ensures the bullet stays at the top if text wraps */
+}
 /* ========================
    SERVICES SECTION STYLES
    ======================== */
@@ -255,54 +263,7 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
     text-decoration: underline !important;
 }
 
-/* ========================
-   PROCEDURE SECTION STYLES
-   ======================== */
 
-/* 1. Step Icon Styling */
-.step-icon {
-    transition: all 0.3s ease-in-out;
-    cursor: default;
-    position: relative;
-    z-index: 2; /* Keeps icon above any potential background elements */
-}
-
-/* Hover Effect: Icon grows slightly and shadow increases */
-.d-flex:hover .step-icon {
-    transform: scale(1.1);
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
-    background-color: var(--primary-color) !important; /* Turns green on hover */
-    color: #fff !important; /* Number turns white */
-    border-color: var(--primary-color) !important;
-}
-
-/* 2. Text Justification (Essential for the paragraph look) */
-.text-justify-smart {
-    text-align: justify;
-    text-align-last: left;
-    -webkit-hyphens: auto;
-    -ms-hyphens: auto;
-    hyphens: auto;
-}
-
-/* 3. Utility: Letter Spacing */
-.ls-2 {
-    letter-spacing: 2px;
-}
-
-/* 4. Utility: Section Underline Decoration */
-.underline {
-    border-radius: 5px;
-}
-
-/* 5. Mobile Tweak: Ensure icons don't touch text on tiny screens */
-@media (max-width: 400px) {
-    .step-icon {
-        width: 50px !important;
-        height: 50px !important;
-        font-size: 1.2rem !important;
-    }
-}
 /* ========================
    FIX HORIZONTAL SCROLL
    ======================== */
