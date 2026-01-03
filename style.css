@@ -248,3 +248,11 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
         font-size: 1.2rem !important;
     }
 }
+/* ========================
+   FIX HORIZONTAL SCROLL
+   ======================== */
+html, body {
+    overflow-x: hidden; /* Hides horizontal scrollbar */
+    width: 100%;        /* Ensures body doesn't stretch beyond screen */
+    position: relative; /* Stabilizes layout */
+}
