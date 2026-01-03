@@ -78,7 +78,7 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
 #hero {
     /* Desktop Default Height (Taller for better impact on big screens) */
     min-height: 75vh;
-    margin-top: 0; /* Ensure no gaps */
+    margin-top: 60px; /* Ensure no gaps */
 }
 
 /* Background Image Styling */
